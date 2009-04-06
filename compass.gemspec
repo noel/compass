@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{compass}
-  s.version = "0.6.6"
+  s.version = "0.7.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chris Eppstein"]
-  s.date = %q{2009-05-08}
+  s.date = %q{2009-05-02}
   s.default_executable = %q{compass}
   s.description = %q{Sass-Based CSS Meta-Framework. Semantic, Maintainable CSS.}
   s.email = %q{chris@eppsteins.net}
