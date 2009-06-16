@@ -13,14 +13,28 @@
   table, caption, tbody, tfoot, thead, tr, th, td
     +reset-box-model
     +reset-font
-  +reset-focus
-  +reset-body
-  +reset-list-style
+  
+  *:focus
+    +reset-focus
+  
+  body
+    +reset-body
+    
+  ol, ul
+    +reset-list-style
+
   /* tables still need 'cellspacing="0"' in the markup 
-  +reset-table
-  +reset-table-cell
-  +reset-quotation
-  +reset-image-anchor-border
+  table
+    +reset-table
+  
+  caption, th, td
+    +reset-table-cell
+  
+  q, blockquote
+    +reset-quotation
+    
+  img a
+    +reset-image-anchor-border
  
  
 // Reset all elements within some selector scope.To reset the selector itself,
@@ -32,11 +46,19 @@
   dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr
     +reset-box-model
     +reset-font
+
   /* tables still need 'cellspacing="0"' in the markup 
-  +reset-table
-  +reset-table-cell
-  +reset-quotation
-  +reset-image-anchor-border
+  table
+    +reset-table
+  
+  caption, th, td
+    +reset-table-cell
+  
+  q, blockquote
+    +reset-quotation
+  
+  img a
+    +reset-image-anchor-border
  
 //Mixins partials
 =reset-box-model
@@ -54,37 +76,30 @@
   :vertical-align baseline
  
 =reset-focus
-  *:focus
-    :outline 0
+  :outline 0
  
 =reset-body
-  body
-    :line-height 1em
-    :color = #000
-    :background #fff
+  :line-height 1em
+  :color = #000
+  :background #fff
  
 =reset-list-style
-  ol, ul
-    :list-style none
+  :list-style none
  
 =reset-table
-  table
-    :border-collapse separate
-    :border-spacing 0
-    :vertical-align middle
+  :border-collapse separate
+  :border-spacing 0
+  :vertical-align middle
  
 =reset-table-cell
-  caption, th, td
-    :text-align left
-    :font-weight normal
-    :vertical-align middle
+  :text-align left
+  :font-weight normal
+  :vertical-align middle
  
 =reset-quotation
-  q, blockquote
-    :quotes "" ""
-    &:before, &:after
-      :content ""
+  :quotes "" ""
+  &:before, &:after
+    :content ""
  
 =reset-image-anchor-border
-  img a
-    :border none
+  :border none
